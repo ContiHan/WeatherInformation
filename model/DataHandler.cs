@@ -37,7 +37,9 @@ namespace WeatherInformation.model
         }
         public WeatherInfo.Root GetWeatherDataAsObject()
         {
-            return JsonConvert.DeserializeObject<WeatherInfo.Root>(Data);
+            WeatherInfo.Root? data = JsonConvert.DeserializeObject<WeatherInfo.Root>(Data);
+            ArgumentNullException.ThrowIfNull(data);
+            return data;
         }
 
         private string GetDataFromUrl(string url)
