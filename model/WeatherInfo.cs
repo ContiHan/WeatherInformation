@@ -18,6 +18,10 @@ namespace WeatherInformation.model
         public class Weather
         {
             public int Id { get; set; }
+
+            /// <summary>
+            /// Weather status (Clouds, Rain, Clear etc.)
+            /// </summary>
             public string Main { get; set; }
             public string Description { get; set; }
             public string Icon { get; set; }
@@ -36,6 +40,10 @@ namespace WeatherInformation.model
             public List<Weather> Weather { get; set; }
             public Main Main { get; set; }
             public double Dt { get; set; }
+
+            /// <summary>
+            /// City
+            /// </summary>
             public string Name { get; set; }
 
             public DateTime DateTime
@@ -45,7 +53,6 @@ namespace WeatherInformation.model
 
             public string FullInfo
             {
-                //get => $"City: {Name}\nDate: {DateTime}\nTemperature: {Main.Temp}\n" + Weather.ForEach(x => $"{x.Main}");
                 get
                 {
                     string value = $"City: {Name}\nDate: {DateTime}\nTemperature: {Main.Temp}°C\n";

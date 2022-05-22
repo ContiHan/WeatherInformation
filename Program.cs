@@ -1,4 +1,5 @@
-﻿using WeatherInformation.model;
+﻿using System.Globalization;
+using WeatherInformation.model;
 
 //string apiKey = "a7bf257916dee56198a99ce95aaef81d";
 //string city = "Hradec Králové";
@@ -36,4 +37,5 @@ dataManager.AppendAndSave(weatherData, @"..\..\..\pokus_textfile.txt");
 Console.WriteLine();
 
 Console.WriteLine(new DataHandler(city: "Brandýs nad Labem").GetWeatherDataAsCsv());
+new SqlDataAccess().AddToSqlDb(weatherData);
 Console.WriteLine();
