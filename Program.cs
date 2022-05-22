@@ -11,13 +11,7 @@ DataHandler dataHandlerLiberec = new(city: "Liberec");
 DataHandler dataHandlerHribojedy = new(city: "Hřibojedy");
 WeatherInfo.Root weatherData = dataHandler.GetWeatherDataAsObject();
 
-
-Console.WriteLine($"City: {weatherData.Name}");
-Console.WriteLine($"Latitude: {weatherData.Coord.Lat}");
-Console.WriteLine($"Longitude: {weatherData.Coord.Lon}");
-Console.WriteLine($"Date: {weatherData.DateTime}");
-Console.WriteLine($"Temperature: {weatherData.Main.Temp}°C");
-weatherData.Weather.ForEach(x => Console.WriteLine($"Status: {x.Main}"));
+Console.WriteLine(weatherData.FullInfo);
 
 TextFile dataManager = new();
 dataManager.Save(weatherData, @"..\..\..\pokus_textfile.txt");
@@ -39,4 +33,7 @@ weatherData = dataHandlerHribojedy.GetWeatherDataAsObject();
 Console.WriteLine($"City: {weatherData.Name}");
 Console.WriteLine(dataHandlerHribojedy.GetWeatherDataAsCsv());
 dataManager.AppendAndSave(weatherData, @"..\..\..\pokus_textfile.txt");
+Console.WriteLine();
+
+Console.WriteLine(new DataHandler(city: "Brandýs nad Labem").GetWeatherDataAsCsv());
 Console.WriteLine();

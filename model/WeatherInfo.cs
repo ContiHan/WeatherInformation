@@ -42,6 +42,17 @@ namespace WeatherInformation.model
             {
                 get => new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(Dt).ToLocalTime();
             }
+
+            public string FullInfo
+            {
+                //get => $"City: {Name}\nDate: {DateTime}\nTemperature: {Main.Temp}\n" + Weather.ForEach(x => $"{x.Main}");
+                get
+                {
+                    string value = $"City: {Name}\nDate: {DateTime}\nTemperature: {Main.Temp}°C\n";
+                    Weather.ForEach(x => value += $"Status: {x.Main}");
+                    return value;
+                }
+            }
         }
     }
 }

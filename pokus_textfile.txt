@@ -1,24 +1,24 @@
 City: Maroko
 Latitude: -7,635
 Longitude: 107,8919
-Date: 21.05.2022 11:29:50
-Temperature: 25,74°C
+Date: 22.05.2022 13:01:10
+Temperature: 25,69°C
 Status: Clouds
 City: Prague
 Latitude: 50,088
 Longitude: 14,4208
-Date: 21.05.2022 11:25:20
-Temperature: 18,61°C
+Date: 22.05.2022 13:00:27
+Temperature: 19,68°C
 Status: Clouds
 City: Liberec
 Latitude: 50,7671
 Longitude: 15,0562
-Date: 21.05.2022 11:28:32
-Temperature: 14,77°C
+Date: 22.05.2022 13:00:07
+Temperature: 16,72°C
 Status: Clouds
 City: Hřibojedy
 Latitude: 50,3921
 Longitude: 15,8347
-Date: 21.05.2022 11:29:51
-Temperature: 17,15°C
+Date: 22.05.2022 13:01:11
+Temperature: 17,01°C
 Status: Clouds
